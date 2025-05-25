@@ -1,10 +1,22 @@
 let button = document.querySelector(".generate-btn");
 let text = document.querySelector(".text");
 
+let coolDown = false;
+
 button.addEventListener("click", () => {
-    getJoke().then(joke => {
-        text.textContent = joke;
-    });
+    if (!coolDown) {
+        getJoke().then(joke => {
+            text.textContent = joke;
+        });
+
+        coolDown = true;
+
+        setTimeout(() => {
+            coolDown = false;
+        }, 2000);
+    } else {
+        text.textContent = "Sorry! Wait for abit before getting a new joke."
+    }
 });
 
 let getJoke = async () => {

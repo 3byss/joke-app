@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+ * {
+    padding: 0;
+    margin: 0;
+ }
+
 body {
     font-family: 'Roboto Mono', 'open sans';
     background-color: rgb(238, 238, 238);
@@ -33,11 +38,12 @@ button {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    padding: 18px;
 }
 
 .header {
     font-size: 27px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .generate-btn {
@@ -49,18 +55,23 @@ button {
     height: 35px;
     width: 180px;
     cursor: pointer;
+    margin: 0px 5px;
 }
 
 .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: rgb(238, 238, 238);
     border: 2.5px solid black;
     border-radius: 27px;
-    text-align: center;
     font-weight: 500;
     font-size: 12px;
-    width: 380px;
-    height: 30px;
-    margin: 30px;
+    width: 480px;
+    height: 40px;
+    margin: 8px;
+    padding: 13px;
 }
 
 .generate-btn:hover {
